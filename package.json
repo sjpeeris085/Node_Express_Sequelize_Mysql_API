@@ -1,0 +1,30 @@
+{
+  "name": "node_express_sequelize_mysql_api",
+  "version": "1.0.0",
+  "description": "node express CRUD API with sequelize and mysql",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjpeeris085/Node_Express_Sequelize_Mysql_API.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql"
+  ],
+  "author": "sjpeeris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjpeeris085/Node_Express_Sequelize_Mysql_API/issues"
+  },
+  "homepage": "https://github.com/sjpeeris085/Node_Express_Sequelize_Mysql_API#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0"
+  }
+}
