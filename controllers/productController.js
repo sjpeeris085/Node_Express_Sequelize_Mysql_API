@@ -44,6 +44,18 @@ const getProductById = async (req, res) => {
 };
 
 // 4. update product
+/*
+    app.put("app/cources/:id", (req, res) => {
+    1. Validate
+      If invalid, return 400 - Bad request
+
+    2. Look up the cource
+      If not existing, returbn 404 - Not found
+
+    3. Update cource
+      Rerturn updated cource
+    });
+*/
 
 const updateProduct = async (req, res) => {
   let id = req.params.id;

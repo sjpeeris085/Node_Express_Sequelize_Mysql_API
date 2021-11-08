@@ -31,6 +31,14 @@ db.sequelize = sequelize;
 
 db.products = require("./productModel.js")(sequelize, DataTypes);
 db.reviews = require("./reviewModel.js")(sequelize, DataTypes);
+
+//realationships
+db.products.hasMany(db.reviews, {
+  onDelete: "RESTRICT",
+  onUpdate: "RESTRICT",
+});
+db.reviews.belongsTo(db.products);
+
 db.sequelize
   .sync({ force: false }) //force :true - drop all tables before start
   .then(() => {
