@@ -1,6 +1,9 @@
 const express = require("express"); //require("express") return an method. we assign as express
 const cors = require("cors");
 
+const productRouter = require("./routes/productRouter");
+const auth = require("./controllers/authController");
+const user = require("./controllers/usersController");
 //Instantiate express (make an object)
 const app = express(); // express() return object. we assign it as app
 
@@ -17,10 +20,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //routers
-
-//Product router
-const productRouter = require("./routes/productRouter.js");
 app.use("/api/products", productRouter);
+app.use("/api/auth", auth);
+app.use("/api/users", user);
 // .................
 
 //Testing api
